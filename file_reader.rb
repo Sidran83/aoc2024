@@ -3,12 +3,17 @@ class FileReader
 
   def initialize(path)
     @path = path
-    @lines = read_lines
+    @lines = split_in_two
   end
 
   private
 
-  def read_lines
-    File.read(@path).split("\n")
+  def split_in_two
+    File.read(@path).split("\n\n").map { |section| section.split("\n") }
   end
+
+  # def read_lines
+  #   byebug
+  #   File.read(@path).split("\n")
+  # end
 end
