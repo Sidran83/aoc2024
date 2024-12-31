@@ -3,7 +3,7 @@ class FileReader
 
   def initialize(path)
     @path = path
-    @lines = read_each_elem
+    @lines = read_lines # attentin de bien choisir la méthode qui correspond à l'input du jour
   end
 
   private

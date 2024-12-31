@@ -2,9 +2,9 @@ require 'artii'
 
 module Formatter
 
-  def pretty_print(result, num)
+  def pretty_print(result, num, day)
     a = Artii::Base.new
-    puts a.asciify("AOC - PART #{num}")
+    puts a.asciify("AOC -  DAY #{day} - PART #{num}")
 
     puts "
     ##################################
